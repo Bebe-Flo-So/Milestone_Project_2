@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+<<<<<<< Updated upstream
     
         <header>
           <h1 className="title">Welcome to Monty's Mineral SPA</h1>
@@ -37,8 +38,15 @@ function App() {
 
   
 
+=======
+      Hello World
+>>>>>>> Stashed changes
     </div>
   );
 }
 
 export default App;
+
+//7aa9b168717db217413d4387a91aef6c (key for tmdb)
+
+
