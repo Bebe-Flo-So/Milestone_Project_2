@@ -1,10 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
+require('dotenv').config()
+
 const app = express()
 
-app.get('/',(req, res) =>{
-    res.send('welcome to our project')
-})
-app.listen(3000,() => {
-    console.log('listen on port 3000')
-})
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, console.log(`listening on port ${PORT}`))
+
