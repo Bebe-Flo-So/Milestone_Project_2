@@ -1,50 +1,50 @@
 import{Carousel} from 'react-bootstrap'
-const MovieTitleScroll= () => {
-
-
-    return (
-        
-        <Carousel data-bs-theme="dark">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=f5f5f5"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=eee"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=e5e5e5"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+const MovieTitleScroll= ({movies}) => {
+console.log('Here are my movies', movies)
+  return (
+    <div>
+    {!!movies &&
+      movies.map(movie => {
+        return (
+          <div>
+            {movie.original_title}
+            {movie.overview}
+            <img
+                src='https://image.tmdb.org/t/p/w200/1E5baAaEse26fej7uHcjOgEE2t2.jpg'
+                 alt="First slide"
+              />
+          </div>
+        )
+      })
+    }
+    </div>
+  )
+    // <Carousel>
+    //   {movies.length > 0 &&
+      
+    //     movies.map((movie, index) => {
+    //       console.log('WE HERE ==>', movie)
+    //       return (
+    //         <Carousel.Item key={`movie-${index}`}>
+    //            <img
+    //               className="d-block w-100"
+    //               src={movie.poster_path}
+    //               alt="First slide"
+    //             />
+    //         <Carousel.Caption>
+    //           <h3>THIS IS MY TITLE</h3>
+    //           <p>{movie.overview}</p>
+    //         </Carousel.Caption>
+    //        </Carousel.Item>
+    //       )
+    //     })
+    //   }
+    // </Carousel>
+  // );
 }
 
 
+    
 export default MovieTitleScroll;
 
     
